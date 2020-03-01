@@ -114,3 +114,13 @@ source ${ZSH}/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias pv='ffprobe -show_streams -select_streams v -show_packets -of csv=nk=0 -show_entries packet=codec_type,stream_index,pts_time,duration_time,flags'
 alias pa='ffprobe -show_streams -select_streams a -show_packets -of csv=nk=0 -show_entries packet=codec_type,stream_index,pts_time,duration_time,flags'
 alias pp='ffprobe -show_streams -show_packets -of csv=nk=0 -show_entries packet=codec_type,stream_index,pts_time,duration_time,flags'
+
+# fuzzy finder (https://github.com/junegunn/fzf)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# python virtualenv
+# pip3 install virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+export PROJECT_HOME=~/Devel
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3  # or your own python3 path
+source /usr/local/bin/virtualenvwrapper.sh
